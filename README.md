@@ -43,7 +43,7 @@ Work through these exercises on your own. Experiment, make mistakes, ask questio
 
 Prompt the user to enter two integers. The first integer is a lower bound, and the second integer is an upper bound. Compute the sum of all even integers between the lower and upper bounds, including the bounds themselves.
 
-Your code must work for all integers in the range [-2<sup>31</sup> - 1, 2<sup>31</sup>].
+Your code must work for all integers in the range [-2<sup>31</sup>, 2<sup>31</sup> - 1].
 
 ![Exercise 1 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-1.png)
 
@@ -57,7 +57,7 @@ Your code must work for all integers in the range [-2<sup>31</sup> - 1, 2<sup>31
 
 Prompt the user to enter a positive integer. Print the digits of this integer in reverse order.
      
-Your code must work for all integers in the range [1, 2<sup>31</sup>].
+Your code must work for all integers in the range [1, 2<sup>31</sup> - 1].
 
 ![Exercise 2 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-2.png)
 
@@ -70,7 +70,7 @@ Your code must work for all integers in the range [1, 2<sup>31</sup>].
 
 Prompt the user to enter a positive integer. Compute the sum of all of the odd digits in the integer.
 
-Your code must work for all integers in the range [1, 2<sup>31</sup>].
+Your code must work for all integers in the range [1, 2<sup>31</sup> - 1].
 
 ![Exercise 3 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-3.png)
 
@@ -82,7 +82,7 @@ Your code must work for all integers in the range [1, 2<sup>31</sup>].
 
 Prompt the user to enter a series of non-negative integers. When the user enters a negative integer, you can assume he or she is done entering values. What is the average of the values entered?
 
-Your code must work for all integers in the range [0, 2<sup>31</sup>].
+Your code must work for all integers in the range [0, 2<sup>31</sup> - 1].
 
 ![Exercise 4 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-4.png)
 
@@ -99,7 +99,7 @@ There are two possible outputs.
 * `Prime.`
 * `Not prime.`
 
-Your code must work for all integers in the range [0, 2<sup>31</sup>].
+Your code must work for all integers in the range [0, 2<sup>31</sup> - 1].
 
 ![Exercise 5 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-5.png)
 
@@ -123,7 +123,7 @@ Your code must work for all integers in the range [1, 92].
 
 Prompt the user to enter a positive integer. What are its factors?
 
-Your code must work for all integers in the range [1, 2<sup>31</sup>].
+Your code must work for all integers in the range [1, 2<sup>31</sup> - 1].
 
 ![Exercise 7 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-7.png)
 
