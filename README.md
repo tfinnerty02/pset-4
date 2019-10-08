@@ -218,7 +218,7 @@ Continuously prompt the user until a valid input is provided, which is defined a
 Your code should produce the following output.
 
 <span>
-  <img src="https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-all-1.png" alt="Problem Set 4a Output" width="49.75%"/> <img src="https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-all-4.png" alt="Problem Set 4b Output" width="49.75%"/>
+  <img src="https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-all-1.png" alt="Problem Set 4a Output" width="49.75%"/> <img src="https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-all-2.png" alt="Problem Set 4b Output" width="49.75%"/>
 </span>
 
 ## Deadline
