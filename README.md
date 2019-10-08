@@ -150,7 +150,7 @@ Prompt the user to enter an integer. Print a Super Mario-style full pyramid of t
 
 Your code must work for all integers in the range [1, 24].
 
-![Exercise 9 Output](https://github.com/ap-java-ucvts/pset-3-skeleton/blob/master/images/pset-3-exercise-9.png)
+![Exercise 9 Output](https://github.com/ap-java-ucvts/pset-4-skeleton/blob/master/images/pset-4-exercise-9.png)
 
 * Insert one line feed above and below the desired output.
 * Insert one line feed between the prompts and the printed values.
