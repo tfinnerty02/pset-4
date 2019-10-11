@@ -27,7 +27,7 @@ public class ProblemSet4 {
 
         // comment out or uncomment as needed
 
-        ps.sum();
+        // ps.sum();
         ps.reverse();
         ps.digits();
         ps.average();
@@ -88,6 +88,8 @@ public class ProblemSet4 {
 
     public void reverse() {
         int integer;
+        String separatedDigits = "";
+        String digit = "";
         System.out.print("\nPositive integer: ");
         integer = in .nextInt();
 
@@ -97,18 +99,18 @@ public class ProblemSet4 {
         }
 
         String intAsString = String.format("%d", integer);
-        String separatedDigits = "";
-        String digit = "";
-        for (int i = 0; i < intAsString.length(); i++) {
-            digit = intAsString.substring(i, i + 1);
-            if (i == intAsString.length() - 1) {
-                separatedDigits = separatedDigits + digit + ".";
-            } else {
+
+        for (int i = intAsString.length(); i >= 0; i--) {
+            if (i > 0 && i != 1) {
+                digit = intAsString.substring(i - 1, i);
                 separatedDigits = separatedDigits + digit + ", ";
+            } else if (i == 0) {
+                digit = intAsString.substring(i, i + 1);
+                separatedDigits = separatedDigits + digit + ".";
             }
         }
 
-        System.out.println(separatedDigits);
+        System.out.println("\n" + separatedDigits);
 
     }
 
