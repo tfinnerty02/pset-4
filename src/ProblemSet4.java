@@ -87,6 +87,28 @@ public class ProblemSet4 {
      */
 
     public void reverse() {
+        int integer;
+        System.out.print("\nPositive integer: ");
+        integer = in .nextInt();
+
+        while (integer <= 0) {
+            System.out.print("Positive integer: ");
+            integer = in .nextInt();
+        }
+
+        String intAsString = String.format("%d", integer);
+        String separatedDigits = "";
+        String digit = "";
+        for (int i = 0; i < intAsString.length(); i++) {
+            digit = intAsString.substring(i, i + 1);
+            if (i == intAsString.length() - 1) {
+                separatedDigits = separatedDigits + digit + ".";
+            } else {
+                separatedDigits = separatedDigits + digit + ", ";
+            }
+        }
+
+        System.out.println(separatedDigits);
 
     }
 
