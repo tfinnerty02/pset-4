@@ -27,7 +27,7 @@ public class ProblemSet4 {
 
         // comment out or uncomment as needed
 
-        // ps.sum();
+        ps.sum();
         ps.reverse();
         ps.digits();
         ps.average();
@@ -122,8 +122,29 @@ public class ProblemSet4 {
      */
 
     public void digits() {
+      int integer;
+      int intDigit;
+      int sum = 0;
+      System.out.print("\nEnter a positive integer: ");
+      integer = in.nextInt();
 
+      while(integer <= 0) {
+        System.out.print("Enter a positive integer: ");
+        integer = in.nextInt();
+      }
+
+      String intAsString = String.format("%d", integer);
+      char[] digitsArray = intAsString.toCharArray();
+
+      for (int i = 0; i < intAsString.length(); i++){
+        if(digitsArray[i] % 2 == 1) {
+          intDigit=Character.getNumericValue(digitsArray[i]);
+          sum += intDigit;
+        }
+      }
+      System.out.println("\n" + sum + ".");
     }
+
 
     /*
      * Exercise 4.
