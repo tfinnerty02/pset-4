@@ -17,14 +17,13 @@
  */
 
 import java.util.Scanner;
+    import java.util.*;
 
 public class ProblemSet4 {
-
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
         ProblemSet4 ps = new ProblemSet4();
-
         // comment out or uncomment as needed
 
         ps.sum();
@@ -142,7 +141,7 @@ public class ProblemSet4 {
           sum += intDigit;
         }
       }
-      System.out.println("\n" + sum + ".");
+      System.out.println("\n" + sum + ".\n");
     }
 
 
@@ -155,7 +154,24 @@ public class ProblemSet4 {
      */
 
     public void average() {
+      ArrayList<Integer> arrayOfIntegers = new ArrayList<Integer>();
+      int numberEntered;
+      int i = 0;
+      int sum = 0;
+      arrayOfIntegers.add(0);
+      while (arrayOfIntegers.get(i) >= 0) {
+        System.out.print("Non-negative integer: ");
+        numberEntered = in.nextInt();
+        arrayOfIntegers.add(numberEntered);
+        i++;
+      }
 
+      for (int j = 0; j < arrayOfIntegers.size() - 1; j++) {
+        sum += arrayOfIntegers.get(j);
+      }
+      int arraySize = arrayOfIntegers.size() - 2;
+      int average = sum / arraySize;
+      System.out.println("\n" + average + ".");
     }
 
     /*
