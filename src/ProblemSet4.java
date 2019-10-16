@@ -16,8 +16,7 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
-import java.util.Scanner;
-    import java.util.*;
+import java.util.*;
 
 public class ProblemSet4 {
     private static Scanner in = new Scanner(System.in);
@@ -121,27 +120,27 @@ public class ProblemSet4 {
      */
 
     public void digits() {
-      int integer;
-      int intDigit;
-      int sum = 0;
-      System.out.print("\nEnter a positive integer: ");
-      integer = in.nextInt();
+        int integer;
+        int intDigit;
+        int sum = 0;
+        System.out.print("\nEnter a positive integer: ");
+        integer = in .nextInt();
 
-      while(integer <= 0) {
-        System.out.print("Enter a positive integer: ");
-        integer = in.nextInt();
-      }
-
-      String intAsString = String.format("%d", integer);
-      char[] digitsArray = intAsString.toCharArray();
-
-      for (int i = 0; i < intAsString.length(); i++){
-        if(digitsArray[i] % 2 == 1) {
-          intDigit=Character.getNumericValue(digitsArray[i]);
-          sum += intDigit;
+        while (integer <= 0) {
+            System.out.print("Enter a positive integer: ");
+            integer = in .nextInt();
         }
-      }
-      System.out.println("\n" + sum + ".\n");
+
+        String intAsString = String.format("%d", integer);
+        char[] digitsArray = intAsString.toCharArray();
+
+        for (int i = 0; i < intAsString.length(); i++) {
+            if (digitsArray[i] % 2 == 1) {
+                intDigit = Character.getNumericValue(digitsArray[i]);
+                sum += intDigit;
+            }
+        }
+        System.out.println("\n" + sum + ".\n");
     }
 
 
@@ -154,24 +153,24 @@ public class ProblemSet4 {
      */
 
     public void average() {
-      ArrayList<Integer> arrayOfIntegers = new ArrayList<Integer>();
-      int numberEntered;
-      int i = 0;
-      int sum = 0;
-      arrayOfIntegers.add(0);
-      while (arrayOfIntegers.get(i) >= 0) {
-        System.out.print("Non-negative integer: ");
-        numberEntered = in.nextInt();
-        arrayOfIntegers.add(numberEntered);
-        i++;
-      }
+        ArrayList < Integer > arrayOfIntegers = new ArrayList < Integer > ();
+        int numberEntered;
+        int i = 0;
+        int sum = 0;
+        arrayOfIntegers.add(0);
+        while (arrayOfIntegers.get(i) >= 0) {
+            System.out.print("Non-negative integer: ");
+            numberEntered = in .nextInt();
+            arrayOfIntegers.add(numberEntered);
+            i++;
+        }
 
-      for (int j = 0; j < arrayOfIntegers.size() - 1; j++) {
-        sum += arrayOfIntegers.get(j);
-      }
-      int arraySize = arrayOfIntegers.size() - 2;
-      int average = sum / arraySize;
-      System.out.println("\n" + average + ".");
+        for (int j = 0; j < arrayOfIntegers.size() - 1; j++) {
+            sum += arrayOfIntegers.get(j);
+        }
+        int arraySize = arrayOfIntegers.size() - 2;
+        double average = (double) sum / (double) arraySize;
+        System.out.printf("\n%,.2f\n", average);
     }
 
     /*
@@ -181,8 +180,28 @@ public class ProblemSet4 {
      */
 
     public void prime() {
+        int numberTested;
+        boolean prime = true;
+        System.out.print("\nNon-negative integer: ");
+        numberTested = in .nextInt();
 
+        while (numberTested <= 0) {
+            System.out.print("Non-negative integer: ");
+            numberTested = in .nextInt();
+        }
+
+        for (int i = 2; i <= numberTested / 2; i++) {
+            if (numberTested % i == 0) {
+                prime = false;
+            }
+        }
+        if (prime) {
+            System.out.println("\nPrime.");
+        } else {
+            System.out.println("\nNot prime.");
+        }
     }
+
 
     /*
      * Exercise 6.
