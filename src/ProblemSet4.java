@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. UCVTS and its affiliated.
+ */
+
 /**
  * Problem Set 4.
  *
@@ -343,8 +347,7 @@ public class ProblemSet4 {
      * Luhn's algorithm, is the credit card number valid?
      */
 
-    public void credit() {
-        in.nextLine();
+    public void credit() { in .nextLine();
         System.out.print("\nNumber: ");
         String number = in .nextLine();
         int sumEveryOtherDigit = 0;
