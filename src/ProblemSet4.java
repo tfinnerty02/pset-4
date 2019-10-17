@@ -223,9 +223,9 @@ public class ProblemSet4 {
             fibonacciN = in .nextInt();
         }
 
-        int base1 = 0;
-        int base2 = 1;
-        int fibonacci = 0;
+        long base1 = 0;
+        long base2 = 1;
+        long fibonacci = 0;
 
         for (int i = 2; i <= fibonacciN; i++) {
             fibonacci = base1 + base2;
@@ -347,7 +347,8 @@ public class ProblemSet4 {
      * Luhn's algorithm, is the credit card number valid?
      */
 
-    public void credit() { in .nextLine();
+    public void credit() {
+        in .nextLine();
         System.out.print("\nNumber: ");
         String number = in .nextLine();
         int sumEveryOtherDigit = 0;
