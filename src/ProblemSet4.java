@@ -60,7 +60,7 @@ public class ProblemSet4 {
         upperBound = in .nextInt();
 
         while (lowerBound > upperBound) {
-            System.out.print("\nLower bound: ");
+            System.out.print("Lower bound: ");
             lowerBound = in .nextInt();
             System.out.print("Upper bound: ");
             upperBound = in .nextInt();
@@ -123,11 +123,11 @@ public class ProblemSet4 {
         int integer;
         int intDigit;
         int sum = 0;
-        System.out.print("\nEnter a positive integer: ");
+        System.out.print("\nPositive integer: ");
         integer = in .nextInt();
 
         while (integer <= 0) {
-            System.out.print("Enter a positive integer: ");
+            System.out.print("Positive integer: ");
             integer = in .nextInt();
         }
 
@@ -202,7 +202,6 @@ public class ProblemSet4 {
         }
     }
 
-
     /*
      * Exercise 6.
      *
@@ -211,7 +210,25 @@ public class ProblemSet4 {
      */
 
     public void fibonacci() {
+        int fibonacciN;
+        System.out.print("\nPositive integer: ");
+        fibonacciN = in .nextInt();
 
+        while (fibonacciN <= 0 || fibonacciN > 92) {
+            System.out.print("Positive integer: ");
+            fibonacciN = in .nextInt();
+        }
+
+        int base1 = 0;
+        int base2 = 1;
+        int fibonacci = 0;
+
+        for (int i = 2; i <= fibonacciN; i++) {
+            fibonacci = base1 + base2;
+            base1 = base2;
+            base2 = fibonacci;
+        }
+        System.out.println("\n" + base2 + ".");
     }
 
     /*
@@ -221,7 +238,25 @@ public class ProblemSet4 {
      */
 
     public void factors() {
+        System.out.print("\nPositive integer: ");
+        int testValue = in .nextInt();
 
+        while (testValue <= 0) {
+            System.out.print("Positive integer: ");
+            testValue = in .nextInt();
+        }
+
+        System.out.print("\n");
+
+        for (int i = 1; i <= testValue; i++) {
+            if (testValue % i == 0) {
+                if (i == testValue) {
+                    System.out.print(i + ".\n");
+                    return;
+                }
+                System.out.print(i + ", ");
+            }
+        }
     }
 
     /*
@@ -232,6 +267,31 @@ public class ProblemSet4 {
      */
 
     public void mario() {
+        System.out.print("\nHeight: ");
+        int height = in .nextInt();
+
+        while (height < 1 || height > 24) {
+            System.out.print("Height: ");
+            height = in .nextInt();
+        }
+
+        System.out.print("\n");
+
+        String output = "";
+        int x = height;
+        String y = " ";
+        String z = "#";
+
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x - (i + 1); j++) {
+                output = output + y;
+            }
+            for (int k = 0; k < i + 2; k++) {
+                output = output + z;
+            }
+            output = output + '\n';
+        }
+        System.out.print(output);
 
     }
 
@@ -243,7 +303,37 @@ public class ProblemSet4 {
      */
 
     public void luigi() {
+        System.out.print("\nHeight: ");
+        int height = in .nextInt();
 
+        while (height < 1 || height > 24) {
+            System.out.print("Height: ");
+            height = in .nextInt();
+        }
+
+        System.out.print("\n");
+
+        String output = "";
+        int x = height;
+        String y = " ";
+        String z = "#";
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < height - (i + 1); j++) {
+                output += y;
+            }
+            for (int j = 0; j <= i + 1; j++) {
+                output += z;
+            }
+            output += y;
+            output += y;
+            for (int j = 0; j <= i + 1; j++) {
+                output += z;
+            }
+            output += "\n";
+        }
+
+        System.out.print(output);
     }
 
     /*
@@ -254,6 +344,39 @@ public class ProblemSet4 {
      */
 
     public void credit() {
+        in.nextLine();
+        System.out.print("\nNumber: ");
+        String number = in .nextLine();
+        int sumEveryOtherDigit = 0;
+        int digitToMultiply;
+        int finalSum = 0;
 
+        for (int i = number.length() - 2; i >= 0; i -= 2) {
+            digitToMultiply = Character.getNumericValue(number.charAt(i));
+            sumEveryOtherDigit = digitToMultiply * 2;
+            if (sumEveryOtherDigit >= 10) {
+                finalSum += (int)((sumEveryOtherDigit / Math.pow(10, 0)) % 10) + (int)((sumEveryOtherDigit / Math.pow(10, 1)) % 10);
+            } else {
+                finalSum += sumEveryOtherDigit;
+            }
+        }
+
+        for (int i = number.length() - 1; i >= 0; i -= 2) {
+            digitToMultiply = Character.getNumericValue(number.charAt(i));
+            finalSum += digitToMultiply;
+        }
+
+        String stringEveryOtherDigit = Integer.toString(finalSum);
+        if (stringEveryOtherDigit.charAt(stringEveryOtherDigit.length() - 1) == '0') {
+            if (number.charAt(0) == '3' && (number.charAt(1) == '4' || number.charAt(1) == '7')) {
+                System.out.println("\nAmex.\n");
+            } else if (number.charAt(0) == '5' && (number.charAt(1) == '1' || number.charAt(1) == '2' || number.charAt(3) == '3' || number.charAt(4) == '4' || number.charAt(5) == '5')) {
+                System.out.println("\nMastercard.\n");
+            } else if (number.charAt(0) == '4') {
+                System.out.println("\nVisa.\n");
+            }
+        } else {
+            System.out.println("\nInvalid.\n");
+        }
     }
 }
