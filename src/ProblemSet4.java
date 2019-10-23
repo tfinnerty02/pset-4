@@ -252,13 +252,23 @@ public class ProblemSet4 {
 
         System.out.print("\n");
 
-        for (int i = 1; i <= testValue; i++) {
+        for (int i = 1; i <= testValue / 2; i++) {
             if (testValue % i == 0) {
-                if (i == testValue) {
-                    System.out.print(i + ".\n");
+                if (i > testValue / i) {
+                    System.out.print(".\n\n");
                     return;
+                } else {
+                    if (i == 1) {
+                        System.out.print(i + ", " + (testValue / i));
+                    } else {
+                        if (i != (testValue / i)) {
+                            System.out.print(", " + i + ", " + (testValue / i));
+                        } else {
+                            System.out.print(", " + i + ".\n\n");
+                            return;
+                        }
+                    }
                 }
-                System.out.print(i + ", ");
             }
         }
     }
@@ -271,7 +281,7 @@ public class ProblemSet4 {
      */
 
     public void mario() {
-        System.out.print("\nHeight: ");
+        System.out.print("Height: ");
         int height = in .nextInt();
 
         while (height < 1 || height > 24) {
@@ -347,8 +357,7 @@ public class ProblemSet4 {
      * Luhn's algorithm, is the credit card number valid?
      */
 
-    public void credit() {
-        in .nextLine();
+    public void credit() { in .nextLine();
         System.out.print("\nNumber: ");
         String number = in .nextLine();
         int sumEveryOtherDigit = 0;
